@@ -2,6 +2,6 @@
 
 ## Remaining Tasks
     Features remaining
-        - Start Action Toggle
-        - Conditional Classes rendering for circle colors
         - CSS Adaptive Styling
+        - Start Action Toggle
+        - Select checkboxes on start Action button
