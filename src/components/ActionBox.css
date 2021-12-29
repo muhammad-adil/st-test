@@ -1,0 +1,23 @@
+/* // Action box btn /// */
+.action-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 85px 25px 103px 26px;
+}
+.action-box button {
+    height: 48px;
+    width: 320px;
+    background: #247bff;
+    border: 0px;
+    padding: 17px 74px 17px 74px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: Mukta;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+}

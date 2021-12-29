@@ -1,0 +1,39 @@
+.action-header{
+    background: #292929;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.btn-action {
+    flex-basis:0;
+    flex-grow:1;
+}
+.btn-action button{
+    height: 53px;
+    width: 180px;
+    background: #247BFF;
+    border: 0px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+}
+.btn-action i{
+    margin-right: 12px;
+    font-size: 18px;
+}
+.action-status{
+    flex-basis:0;
+    flex-grow:1;
+    display:flex;
+    justify-content:flex-end;
+    margin: 18px 21px 15px 0px;
+}
+.total-items{
+    display:flex;
+    color:#FFF;
+}
