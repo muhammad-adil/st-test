@@ -13,7 +13,7 @@ import "./Card.css";
 export default function Card(props) {
   const [data, setData] = useState(tshirtData);
   // console.log(props, "props in Cardjs");
-  console.log(data, "length", `${data.length}`);
+  // console.log(data, "length", `${data.length}`);
 
   if (data) {
     // onClick={() => props.someHandlerProp('some data')}
