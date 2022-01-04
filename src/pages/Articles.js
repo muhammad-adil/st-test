@@ -5,6 +5,12 @@ import ActionHeader from "../components/ActionHeader.js";
 function Articles() {
   const [showActionCheckBox, setShowActionCheckBox] = useState(false); //{showActionCheckBox: ""}
   const [isActive, setActive] = useState(false);
+  const [dataCountState, updateDatCountState] = useState();
+
+  const handleDataCount = (dataCountState) => {
+    updateDatCountState(dataCountState);
+    console.log("handleDataCount Fired in Articles.js");
+  };
 
   const toggleActiveClass = () => {
     setActive(!isActive);
@@ -30,16 +36,18 @@ function Articles() {
       <ActionHeader
         handleChangeShowActionCheckBox={handleChangeShowActionCheckBox}
         isActive={isActive}
+        dataCountState={dataCountState}
         toggleActiveClass={toggleActiveClass}
         handleToggleActiveClass={handleToggleActiveClass}
+        handleDataCount={handleDataCount}
       />
       <Card
         isActive={isActive}
         setActive={setActive}
-        toggleActiveClass={toggleActiveClass}
         setShowActionCheckBox={showActionCheckBox}
+        toggleActiveClass={toggleActiveClass}
+        handleDataCount={handleDataCount}
       />
-      {/* toggleActiveClass={toggleActiveClass} */}
     </div>
   );
 }

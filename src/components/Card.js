@@ -16,6 +16,8 @@ export default function Card(props) {
   console.log(data, "length", `${data.length}`);
 
   if (data) {
+    // onClick={() => props.someHandlerProp('some data')}
+    props.handleDataCount(data.length);
     // && props
     return (
       <div className="cards-container d-flex f-wrap">

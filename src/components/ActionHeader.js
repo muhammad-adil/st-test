@@ -61,7 +61,9 @@ export default function ActionHeader(props) {
         </div>
 
         <div className="total-items">
-          <p>223 items</p>
+          <p>
+            {props.isActive == true && props.dataCountState + " items selected"}
+          </p>
         </div>
         <div className="action-status play-btn">
           <FaRegPlayCircle />
