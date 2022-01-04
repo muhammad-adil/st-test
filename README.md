@@ -6,7 +6,7 @@
         - CSS Responsive Styling
         - Input only select that box input is clicked by user.
 
-#### Remaining Problems in the Tasks
+#### Remaining Problems in the Test
 
     Problems to resolve
         - Input select all is working fine, but when you click on single input it is selecting all inputs.
