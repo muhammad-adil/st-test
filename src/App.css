@@ -1,51 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
 /* font-family: 'Mukta', sans-serif; */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Mukta', sans-serif;
-}
-body {
   font-family: "Mukta", sans-serif;
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #1f1f1f;
+}
+/* body {
+  font-family: "Mukta", sans-serif;
+} */
 .align-right {
   text-align: right;
+}
+.p-lr-20 {
+  padding: 0 20px;
 }
 .mr-11 {
   margin-right: 11px;
 }
-.d-flex{
-  display:flex;
+.d-flex {
+  display: flex;
 }
-.f-wrap{
-  flex-wrap:wrap;
+.f-wrap {
+  flex-wrap: wrap;
 }
-.flex-center{
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.text-align-right{
+.text-align-right {
   text-align: right;
 }
-.text-align-left{
+.text-align-left {
   text-align: left;
 }
-.text-align-center{
-  text-align:center;
+.text-align-center {
+  text-align: center;
 }
 /*  Main App CSS Container  */
-.test-app{
+.wrapper {
+  background-color: #1f1f1f;
   display: flex;
-  min-height: 100vh;
+  /* min-height: 100%;
+  max-height: 100vh;
+  height: auto !important; */
+  /* height: auto !important;
+  min-height: 100%; */
+  height: 100%;
+  min-height: 100%;
 }
-.site-main{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: #1F1F1F;
-  }
+.page-content {
+  position: absolute;
+  background-color: #1f1f1f;
+  right: 0;
+  left: 54px;
+  transition: left 850ms;
+}
+
+/* .flex-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+} */
 /*
 .home,
 .reports,
@@ -64,46 +88,47 @@ M E D I A  Q U E R I E S
 ####################################################
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 */
-@media screen and (min-width: 1900px) {
+/* @media screen and (min-width: 1900px) {
   .container {
-    width: 1870px;
+    width: 100%;
   }
-}
-@media screen and (min-width: 1600px) {
+} */
+/* @media screen and (min-width: 1600px) {
   .container {
     width: 1570px;
+    margin: 0 auto;
   }
-}
+} */
 
 /* Agnostic Media Queries CSS */
-@media screen and (max-width: 1440px){
-  .container{
+/* @media screen and (max-width: 1440px) {
+  .container {
     max-width: 1353px;
-    margin:0 auto;
+    margin: 0 auto;
   }
-}
-@media screen and (min-width: 1440px) {
+} */
+/* @media screen and (min-width: 1440px) {
   .container {
     width: 1440px;
-    margin:0 auto;
+    margin: 0 auto;
   }
-}
-@media screen and (max-width: 1170px){
+} */
+/* @media screen and (max-width: 1170px) {
   .container {
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
     margin: 0 auto;
-    }
-}
-@media screen and (max-width: 1024px){
+  }
+} */
+/* @media screen and (max-width: 1024px) {
   .container {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
     margin: 0 auto;
-    }
-}
+  }
+} */
 
 /* -------------------------------------
 	Tablets & Mobile
@@ -111,84 +136,63 @@ M E D I A  Q U E R I E S
 
 /* ----------- iPad Pro ----------- */
 /* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 1.5),
+/* @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5),
   screen and (max-device-width: 1024px),
-  screen and (max-width: 1024px){
-}
+  screen and (max-width: 1024px) {
+} */
 
 /* Portrait */
-@media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1366px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-}
+/* @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+} */
 
 /* Landscape */
-@media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1366px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-}
+/* @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+} */
 
 /* General styles for Portrait */
-@media only screen
-  and (orientation: portrait) {
-}
+/* @media only screen and (orientation: portrait) {
+} */
 
 /* General styles for Mobile / tablets */
-@media only screen and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2), 
-	only screen and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 3){
-}
+/* @media only screen and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 3) {
+} */
 
 /* General styles for 1024px screens */
-@media screen and (max-width: 1024px), screen and (max-device-width: 1024px){}
+/* @media screen and (max-width: 1024px), screen and (max-device-width: 1024px) {
+} */
 
 /* iPad (iPads 1-5 and iPad mini) landscape */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-}
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+} */
 
 /* iPad (iPads 1-5 and iPad mini) portrait */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-}
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+} */
 
 /* For all landscape */
-@media only screen
-and (max-device-width: 830px)
-and (orientation : landscape) {
-}
+/* @media only screen and (max-device-width: 830px) and (orientation: landscape) {
+} */
 
 /* For all iPad mini and mobile */
-@media screen and (max-width: 800px), screen and (max-device-width: 800px){
-}
+/* @media screen and (max-width: 800px), screen and (max-device-width: 800px) {
+} */
 
 /* iPhones */
-@media screen and (max-width: 740px), screen and (max-device-width: 740px){
-}
+/* @media screen and (max-width: 740px), screen and (max-device-width: 740px) {
+} */
 
 /* Iphone 6+, 6s+, 7+ */
-@media only screen
-and (min-device-width : 414px)
-and (max-device-width : 736px),
-screen and (max-width: 750px){
-}
+/* @media only screen and (min-device-width: 414px) and (max-device-width: 736px),
+  screen and (max-width: 750px) {
+} */
 
 /* Iphone 6, 6s, 7 */
-@media only screen
-and (max-device-width : 375px),
-  screen and (max-width: 375px){}
+/* @media only screen and (max-device-width: 375px),
+  screen and (max-width: 375px) {
+} */
 
 /* Iphone 5, 5s, SE */
-@media only screen
-and (max-device-width : 320px),
-  screen and (max-width: 320px){}
+/* @media only screen and (max-device-width: 320px),
+  screen and (max-width: 320px) {
+} */

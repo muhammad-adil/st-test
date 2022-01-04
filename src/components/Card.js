@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { FaRegPlayCircle } from 'react-icons/fa'
-import CardStatsDetails from './CardStatsDetails.js'
-import ActionBox from './ActionBox.js'
+import React, { useState } from 'react';
+import { FaRegPlayCircle } from 'react-icons/fa';
+import CardStatsDetails from './CardStatsDetails.js';
+import ActionBox from './ActionBox.js';
 //1st way
-import tshirtData from '../data/tshirt.json'
-import './Card.css'
+import tshirtData from '../data/tshirt.json';
+import './Card.css';
 
 export default function Card() {
   const [data, setData] = useState(tshirtData)

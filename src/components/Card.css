@@ -4,19 +4,32 @@
   padding: 32px;
   width: 439px;
 } */
-.cards{
-  background: #292929;
-  max-width:439px;
-  max-height: 471px;
-  padding: 32px 40px 32px 32px;
-  margin-right:20px;
-  margin-top:20px;
+.cards-container {
+  margin-bottom: 50px;
+}
+.cards {
+  margin-top: 20px;
+  margin-right: 20px;
   display: flex;
   flex-direction: row;
+  z-index: 1;
 }
-.cards:nth-child(3n+0){
-  margin-right:0px;
+
+/* Card-Main CSS */
+
+.card-main {
+  background-color: #292929;
+  padding: 32px 10px 8px 13px; /* Add in final*/
+  width: 430px;
+  max-height: 470px;
+  position: relative;
+  border: 3px solid #292929;
 }
+
+.card-main-active {
+  border: 3px solid #247bff;
+}
+
 .card-heading {
   color: #fff;
   font-family: "Mukta", sans-serif;
@@ -27,24 +40,25 @@
   letter-spacing: 0em;
   text-align: center;
 }
-.play-btn {
-  color: #58cc00;
+.play-btn,
+.pause-btn,
+.stop-btn {
   font-size: 20px;
 }
-
+.play-btn {
+  color: #58cc00;
+}
+.pause-btn {
+  color: #ff9101;
+}
+.stop-btn {
+  color: #ff2552;
+}
 .grid-container-top {
   display: grid;
-  grid-template-columns: 10% 80% 10%;
-  margin-bottom: 20px;
-  /*   grid-gap: 10px;
-  padding: 10px; */
+  grid-template-columns: 9% 82% 9%;
+  margin: 0px 32px 0 19px;
 }
-/*
-.grid-container-top > div {
-  text-align: center;
-     padding: 20px 0;
-  font-size: 30px; 
-}*/
 .dot-green {
   background-color: #58cc00;
   border-radius: 50%;
@@ -52,22 +66,33 @@
   width: 34px;
   height: 34px;
 }
-.dot-green-15 {
-  background-color: #58cc00;
+.dot-green-15,
+.dot-orange-15,
+.dot-red-15 {
   border-radius: 50%;
   display: inline-block;
   width: 15px;
   height: 15px;
 }
-
-/* //////////////////////////// */
+.dot-green-15 {
+  background-color: #58cc00;
+}
+.dot-orange-15 {
+  background-color: #ff9101;
+}
+.dot-red-15 {
+  background-color: #ff5252;
+}
+.red {
+  background-color: #ff5252;
+}
+.orange {
+  background-color: #ff9101;
+}
 
 .tshirt-img img {
   height: 147px;
   width: 99px;
-  /*   left: 32px; */
-  /*   top: 90px; */
-  /*   border-radius: 0px;  */
 }
 .tshirt_id {
   background: #cdc3ba;
@@ -89,26 +114,18 @@
 .grid-container {
   display: grid;
   grid-template-columns: 100px 270px;
+  margin: 20px 22px 0 19px;
+  /* grid-template-columns: 25% 70%; */
 }
 
-/* .grid-container > div { 
-   background-color: rgba(255, 255, 255, 0.8);
-   border: 1px solid black; 
-   text-align: center; 
-   font-size: 30px;
- } */
 /* /////////////////////////////////////////////////// */
 
 .card-table {
   background-color: #292929;
   display: grid;
-  /* width: 330px; */
+  width: 100%;
   margin-left: 10px;
-  grid-template-columns:180px 62px 15px;
-   /*  195px 65px 15px */
-  /* minmax(200px, 0fr)
-  minmax(0px, 0fr)
-  minmax(0px, 0fr) */
+  grid-template-columns: 165px 70px 25px;
 }
 .card-table thead,
 .card-table tbody,
@@ -135,16 +152,15 @@
   text-align: left;
   font-weight: bold;
   font-size: 16px; */
-color: white;
-margin-bottom: 12px;
-font-family: inherit;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 18px;
-letter-spacing: 0em;
-text-align: left;
-
+  color: white;
+  margin-bottom: 12px;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 th:last-child {
@@ -171,31 +187,22 @@ tr:last-child td {
 
 /* //////////////////////////// */
 .grid__container-bottom {
-  display: grid;
-  /*   grid-template-columns: repeat(4, 1fr); */
-  /*   grid-template-columns: 
-    minmax(100px, 1fr)
-    minmax(100px, 1fr)
-    minmax(100px, 1fr)
-  gap: 10px; */
-  /*   grid-template-columns: 80px 200px 30px; */
+  /* display: grid;
   grid-gap: 10px;
-  margin-top: 52px;
+  margin-top: 52px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 52px 30px 40px 20px;
 }
 
 .stat__card {
   background-color: #292929;
-  /*   padding: 1rem; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
+  grid-gap: 23px;
   row-gap: 20px;
-  grid-row-gap:20px;
-  grid-template-columns:
-    minmax(99px, 0fr)
-    minmax(99px, 0fr)
-    minmax(99px, 0fr)
-    minmax(79px, 0fr);
+  grid-template-columns: repeat(4, 25%);
+  /* grid-gap: 17%; */
 }
 
 .stat__container {
@@ -230,4 +237,24 @@ tr:last-child td {
   .grid__container {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+/* / ///////////////////////////Action Box Overlay for select item */
+.action-box-overlay {
+  position: absolute;
+  height: 205px;
+  width: 95%;
+  background: linear-gradient(180deg, rgba(25, 47, 81, 0) 0%, #192f51 66.67%);
+  top: 258px;
+  left: 0;
+  margin: 0 10px;
+  z-index: 99;
+}
+.action-box-overlay form {
+  margin-left: 14px;
+  position: relative;
+  top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: inherit;
 }
