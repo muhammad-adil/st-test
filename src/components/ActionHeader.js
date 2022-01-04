@@ -8,7 +8,7 @@ export default function ActionHeader(props) {
   const handleChangeBtn = () => {
     setShowBtn(!showBtn);
   };
-  console.log(props, "props in ActionHeaderjs");
+  // console.log(props, "props in ActionHeaderjs");
 
   return (
     <div className="action-header-container">
@@ -21,7 +21,10 @@ export default function ActionHeader(props) {
                 onClick={() => {
                   handleChangeBtn();
                   props.handleChangeShowActionCheckBox();
+                  props.toggleActiveClass();
+                  props.handleToggleActiveClass();
                 }}
+                // props.setActive(!isActive)
               >
                 <i>
                   <HiOutlineLightningBolt />

@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import "./Card.css";
-// import tshirtData from "../data/tshirt.json";
 
 export default function CardStatsDetails(props) {
-  // const [showActionCheckBox, setShowActionCheckBox] = useState(true);
-  // console.log(props, "props from cardStats");
-
   return (
     <div>
       <div
@@ -35,8 +31,6 @@ export default function CardStatsDetails(props) {
               <td className="align-right mr-11">{props.sales_rate}</td>
               <td>
                 <span className={`dot-${props.status_color}-15`}></span>
-                {/* <span className="dot-green-15"></span> */}
-                {/* <span className="dot-green-15"></span> */}
               </td>
             </tr>
             <tr>

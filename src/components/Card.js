@@ -12,20 +12,8 @@ import "./Card.css";
 
 export default function Card(props) {
   const [data, setData] = useState(tshirtData);
-  console.log(props, "props in Cardjs");
-  console.table(data);
-
-  // const [isActive, setActive] = useState(false);
-  // const toggleActiveClass = () => {
-  //   props.setActive(!props.isActive);
-  //   // props.setActive(props.isActive ? true : false); // testing
-  //   // props.setActive(props.isActive ? false : true);
-  //   console.log(
-  //     props.setActive,
-  //     "toggleActiveClass Fired in Card.js",
-  //     props.isActive
-  //   );
-  // };
+  // console.log(props, "props in Cardjs");
+  console.log(data, "length", `${data.length}`);
 
   if (data) {
     // && props
@@ -43,13 +31,12 @@ export default function Card(props) {
               isActive={props.isActive}
               setActive={props.setActive}
             />
-            // showActionCheckBox={props.showActionCheckBox}
           ))}
       </div>
     );
   }
   function CardItem({ tshirt, ...props }) {
-    console.log(props, "props in cardItem");
+    // console.log(props, "props in cardItem");
 
     const [show, setShow] = useState(false);
     const handleChange = () => {
@@ -67,27 +54,21 @@ export default function Card(props) {
           // }}
         >
           <div className="grid-container-top">
-            {/* <div className="play-btn text-align-left"> */}
             {tshirt.status === "open" && (
               <div className="play-btn text-align-left">
                 <FaRegPlayCircle />
               </div>
-              // <span className="dot-green-15"></span>
             )}
             {tshirt.status === "pause" && (
               <div className="pause-btn text-align-left">
                 <FaRegPauseCircle />
               </div>
-              // <span className="dot-orange-15"></span>
             )}
             {tshirt.status === "stop" && (
               <div className="stop-btn text-align-left">
                 <FaRegStopCircle />
               </div>
-              // <span className="dot-red-15"></span>
             )}
-            {/* <FaRegPlayCircle /> */}
-            {/* </div> */}
             <div className="card-heading text-align-center">
               <p>
                 T-SHIRT
