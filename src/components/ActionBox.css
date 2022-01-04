@@ -1,23 +1,103 @@
 /* // Action box btn /// */
 .action-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 85px 25px 103px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 85px 25px 103px 26px;
 }
 .action-box button {
-    height: 48px;
-    width: 320px;
-    background: #247bff;
-    border: 0px;
-    padding: 17px 74px 17px 74px;
-    margin-bottom: 10px;
-    color: #fff;
-    font-family: Mukta;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: center;
+  height: 48px;
+  width: 320px;
+  background: #247bff;
+  border: 0px;
+  padding: 17px 74px 17px 74px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: Mukta;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/* Action header checkbox CSS */
+/* The container */
+.action-box-checkbox {
+  color: #fff;
+  display: flex;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 12px;
+  padding-top: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Mukta;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+}
+
+/* Hide the browser's default checkbox */
+.action-box-checkbox .checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border: 1px solid blue;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  border: 2px solid #247bff;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.action-box-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.action-box-checkbox input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.action-box-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.action-box-checkbox .checkmark:after {
+  left: 8px;
+  top: 0px;
+  width: 6px;
+  height: 17px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
